@@ -120,7 +120,7 @@ _example:_
 
 // overwrite the second 100 bytes...
 const data = new Buffer(100, 'binary');
-file.read(100, data)
+file.write(100, data)
   .then(next => {
     // next will equal 200, which is the offset to the byte that follows the 
     // last byte written... if we're conducting successive writes at the end
