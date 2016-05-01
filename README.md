@@ -92,6 +92,16 @@ _arguments:_
 _result:_
 * A `Promise` that is resolved with a `Buffer` containing bytes read from the file.
 
+_example:_
+```javascript
+// ... assuming you've got a file...
+
+file.read(100, 100)
+  .then(data => {
+    // data is a buffer with the second 100 bytes.
+  });
+```
+
 #### .write(offset, data, first, length)
 Writes the specified bytes to the file beginning at the specified offset.
 
@@ -103,6 +113,21 @@ _arguments:_
 
 _result:_
 * A `Promise` that is resolved with the offset of the byte following the last byte written
+
+_example:_
+```javascript
+// ... assuming you've got a file...
+
+// overwrite the second 100 bytes...
+const data = new Buffer(100, 'binary');
+file.read(100, data)
+  .then(next => {
+    // next will equal 200, which is the offset to the byte that follows the 
+    // last byte written... if we're conducting successive writes at the end
+    // of the file then this also equals the size of the file.
+  });
+```
+
 
 #### .sync()
 Synchronizes the underlying storage device by writing through the disk cache if such is present.
