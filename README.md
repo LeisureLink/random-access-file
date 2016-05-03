@@ -1,20 +1,20 @@
-# @leisurelink/random-access-file
+# random-access-file
 
-A simple abstraction for random access files using the promise style, for nodejs.
+A simple abstraction for random access files using the promise style in nodejs.
 
-`@leisurelink/random-access-file` exposes a fairly simple, low-level class, `RandomAccessFile` that is intended for binary data that is frequently accessed out of order.
+`ranfile` exposes a fairly simple, low-level class, `RandomAccessFile` that is intended for binary data that is frequently accessed out of order.
 
 ## Install
 
 ```bash
-npm install @leisurelink/random-access-file 
+npm install ranfile
 ```
 
 ## Use/Import
 
 [nodejs](https://nodejs.org/en/)
 ```javascript
-const RandomAccessFile = require('@leisurelink/random-access-file')
+const RandomAccessFile = require('ranfile')
 ```
 
 ### Module API
@@ -42,7 +42,7 @@ _returns:_
 
 _example:_
 ```javascript
-const RandomAccessFile = require('@leisurelink/random-access-file')
+const RandomAccessFile = require('ranfile')
 
 RandomAccessFile.create('/home/me/temp/my-test-file')
   .then(file => {
@@ -63,7 +63,7 @@ _returns:_
 
 _example:_
 ```javascript
-const RandomAccessFile = require('@leisurelink/random-access-file')
+const RandomAccessFile = require('ranfile')
 
 RandomAccessFile.open('/home/me/temp/my-test-file', true)
   .then(file => {
@@ -122,7 +122,7 @@ _example:_
 const data = new Buffer(100, 'binary');
 file.write(100, data)
   .then(next => {
-    // next will equal 200, which is the offset to the byte that follows the 
+    // next will equal 200, which is the offset to the byte that follows the
     // last byte written... if we're conducting successive writes at the end
     // of the file then this also equals the size of the file.
   });

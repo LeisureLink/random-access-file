@@ -1,7 +1,7 @@
 {
-  "name": "@leisurelink/random-access-file",
+  "name": "ranfile",
   "version": "1.0.0",
-  "description": "A simple abstraction for random access files using the promise style, for nodejs.",
+  "description": "A simple abstraction for random access files using the promise style in nodejs.",
   "main": "index.js",
   "scripts": {
     "pretest": "eslint .",
