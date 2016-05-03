@@ -1,4 +1,4 @@
-# random-access-file
+# random-access-file [![Circle CI](https://circleci.com/gh/LeisureLink/random-access-file.svg?style=svg)](https://circleci.com/gh/LeisureLink/random-access-file)
 
 A simple abstraction for random access files using the promise style in nodejs.
 
