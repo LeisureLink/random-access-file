@@ -1,6 +1,6 @@
 {
   "name": "ranfile",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple abstraction for random access files using the promise style in nodejs.",
   "main": "index.js",
   "scripts": {
